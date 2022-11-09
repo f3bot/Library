@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
 </head>
 <body>
-    <div class="container-1">
-        <form action="#">
-            <input type="text" class="title" placeholder="Title">
-            <input type="text" class="author" placeholder="Author">
-            <input type="text" class="pages" placeholder="Pages">
-            <input type="submit" class="submit" value="Submit">
-        </form>
-    </div>
-    <div class="container2">
-        <div class="bookdiv"></div>
-    </div>
+    <nav class="navbar">
+        <div class="left">
+            <img src="script.png" alt="book">
+            <span>LIBRARY</span>
+        </div>
+    </nav>
+    <main>
+        <div class="button-div">
+            <button>Add Book</button>
+            <form action="#">
+                <input type="text" name="title" id="title" placeholder="Title">
+                <input type="text" name="author" id="author" placeholder="author">
+                <input type="text" name="pages" id="pages" placeholder="pages">
+                <input type="checkbox" class='checkbox' name="read" id="read" placeholder="Read?">
+                <label for="read">Read?</label>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+        <div class="book-container">
+
+        </div>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
