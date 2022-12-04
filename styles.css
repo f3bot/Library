@@ -27,3 +27,22 @@ form input{
     display: flex;
     flex-direction: column;
 }
+
+.book-container{
+    display: flex;
+}
+
+.book-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    margin: 1% 1% 1% 1%;
+}
+
+.book-div span{
+    border: 1px solid green;
+}
