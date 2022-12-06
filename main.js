@@ -4,7 +4,7 @@ const pagesint = document.getElementById('pages')
 const submit = document.getElementById('submit')
 const bookcontainer = document.querySelector('.book-container')
 const loginPopUp = document.querySelector('.popup')
-let checkbox = document.querySelector('.checkbox')
+const checkbox = document.querySelector('.checkbox')
 let myLibrary = []
 let counter = 0
 
@@ -31,19 +31,11 @@ const addBook = () =>{
     book.title = titleint.value
     book.author = authorint.value
     book.pages = pagesint.value
-    myLibrary.push(book)
     let div = document.createElement('div')
     div.classList.add('book-div')
-    let tspan = document.createElement('span')
-    tspan.classList.add('Booktitle')
-    tspan.textContent = book.title;
-    div.appendChild(tspan)
-    let aspan = document.createElement('span')
-    aspan.textContent = book.author
-    div.appendChild(aspan)
-    let pspan = document.createElement('span')
-    pspan.textContent = book.pages + " Pages"
-    div.appendChild(pspan)
+    appendSpan('tspan', 'span', book.title, div)
+    appendSpan('aspan', 'span', book.author, div)
+    appendSpan('pspan', 'span',  book.pages + "pages", div)
     let sspan = document.createElement('button')
     sspan.textContent = 'Not Read'
     sspan.style.background = 'red'
@@ -52,9 +44,15 @@ const addBook = () =>{
     rbutton.textContent = 'Remove'
     div.appendChild(rbutton)
     bookcontainer.appendChild(div)
-    console.table(myLibrary)
     readEvent(sspan)
     removeEvent(rbutton,div)
+}
+
+const appendSpan = (element, elementclass, content, parent) =>{
+    element = document.createElement(element)
+    element.classList.add(elementclass)
+    element.textContent = content
+    parent.appendChild(element)
 }
 
 const resetInput = () =>{
@@ -67,6 +65,7 @@ submit.addEventListener('click', (e) =>{
     e.preventDefault()
     addBook()
     resetInput()
+    counter++
 })
 
 const readEvent = (element) =>{
@@ -87,22 +86,3 @@ const removeEvent = (e,target) =>{
     })
 }
 
-/*
-        myLibrary.push(book)
-        let div = document.createElement('div')
-        div.classList.add('book-div')
-        let tspan = document.createElement('span')
-        tspan.textContent = book.title;
-        div.appendChild(tspan)
-        let aspan = document.createElement('span')
-        aspan.textContent = book.author
-        div.appendChild(aspan)
-        let pspan = document.createElement('span')
-        pspan.textContent = book.pages
-        div.appendChild(pspan)
-        let sspan = document.createElement('span')
-        sspan.textContent = book.status
-        div.appendChild(sspan)
-        bookcontainer.appendChild(div)
-        console.table(myLibrary)
-*/

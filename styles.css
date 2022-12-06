@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arimo', sans-serif;
+    position: relative;
+}
+
+html{
+    height: 100vh;
+    width: 100vw;
 }
 
 .navbar{
@@ -38,8 +44,6 @@ form input{
 
 .book-container{
     display: flex;
-    flex-wrap: wrap;
-    padding: 0 25% 0 25%;
 }
 
 .book-div{
@@ -47,17 +51,16 @@ form input{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 300px;
+    height: 280px;
     width: 200px;
     margin: 1% 1% 1% 1%;
     -webkit-box-shadow: -3px 17px 36px -7px rgba(66, 68, 90, 1);
     -moz-box-shadow: -3px 17px 36px -7px rgba(66, 68, 90, 1);
     box-shadow: -3px 17px 36px -7px rgba(66, 68, 90, 1);
-    padding: 1.5% 0 1.5% 0;
+    padding: 1.5% 0% 1.5% 0;
 }
 
 .book-div span{
-
     width: 80%;
     text-align: center;
 }
@@ -69,26 +72,4 @@ form input{
 .Booktitle{
     font-size: 24px;
     font-weight: bold;
-}
-
-.footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: 550;
-}
-
-.footer img{
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-}
-
-.footer span{
-    padding-bottom: 6px;
 }
