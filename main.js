@@ -9,16 +9,6 @@ const form = document.querySelector('#form')
 let myLibrary = []
 let counter = 0
 
-const openForm = () =>{
-    form.classList.add('.form-opened')
-    console.log('h')
-}
-
-const closeForm = () =>{
-    form.style.visibility = 'hidden'
-    form.style.transform = 'translate(-50%, -50%) scale(0.1)'
-}
-
 function Book(title,author,pages)
 {
     this.title = title
@@ -33,15 +23,17 @@ const addBook = () =>{
     book.pages = pagesint.value
     let div = document.createElement('div')
     div.classList.add('book-div')
-    appendSpan('tspan', 'span', book.title, div)
-    appendSpan('aspan', 'span', book.author, div)
-    appendSpan('pspan', 'span',  book.pages + "pages", div)
+    appendSpan('span', 'tspan', book.title, div)
+    appendSpan('span', 'aspan', book.author, div)
+    appendSpan('span', 'pspan',  book.pages + " pages", div)
     let sspan = document.createElement('button')
     sspan.textContent = 'Not Read'
     sspan.style.background = 'red'
+    sspan.classList.add('sspan')
     div.appendChild(sspan)
     let rbutton = document.createElement('button')
     rbutton.textContent = 'Remove'
+    rbutton.classList.add('rbutton')
     div.appendChild(rbutton)
     bookcontainer.appendChild(div)
     readEvent(sspan)
@@ -75,14 +67,18 @@ const readEvent = (element) =>{
             element.style.background = 'red'
         }else if(element.textContent === 'Not Read'){
             element.textContent = 'Read'
-            element.style.background = 'green'
+            element.style.background = 'lightgreen'
         }
     })
 }
 
 const removeEvent = (e,target) =>{
     e.addEventListener('click', () =>{
-        target.remove();
+        target.style.scale = '0.1'
+        target.style.transition = '0.8s'
+        setTimeout(() => {
+            target.remove();
+          }, 750)
     })
 }
 

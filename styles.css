@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arimo', sans-serif;
-    position: relative;
 }
 
 html{
@@ -13,11 +12,13 @@ html{
 
 .navbar{
     color: black;
-    background-color: rgba(235, 232, 232, 0.696);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgba(3, 3, 3, 0.131);
+    border-bottom: 1px solid rgba(3, 3, 3, 0.3);
+    background-color:  rgba(242, 242, 242, 0.53);
+    height: 15vh;
+    font-size: 60px;
 }
 
 .left{
@@ -25,9 +26,14 @@ html{
     align-items: center;
 }
 
+
 img{
-    height: 40px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
+}
+
+main{
+    background-color:  rgba(235, 232, 232, 0.685)
 }
 
 .button-div{
@@ -35,25 +41,6 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-form{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    transform: translate(-50%, -50%) scale(0.1);
-    visibility: hidden;
-}
-
-.form-opened{
-    visibility: visible !important;
-    transform: translate(-50%, 50%) scale(1) !important;
-}
-
-form:active{
-    display: block;
 }
 
 form input{
@@ -67,6 +54,45 @@ form input{
     display: flex;
     flex-wrap: wrap;
     padding: 0 10% 0 13%;
+    height: 77vh;
+}
+
+.sspan{
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+}
+
+.sspan:hover{
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.sspan:not(:hover){
+    height: 40px;
+    transition: 0.5s;
+}
+
+
+
+.rbutton{
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    background-color: lightcoral;
+    height: 40px;
+    margin-bottom: 5%;
+}
+
+.rbutton:hover{
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.rbutton:not(:hover){
+    height: 40px;
+    transition: 0.5s;
 }
 
 .book-div{
@@ -81,6 +107,21 @@ form input{
     box-shadow: -3px 17px 36px -7px rgba(66, 68, 90, 1);
     margin: 2.5% 2.5% 2.5% 3.5%;
 }
+
+.tspan{
+    font-size: 36px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.57);
+    margin-top: 3%;
+}
+
+.aspan{
+    font-size: 24px;
+}
+
+.pspan{
+    font-size: 20px;
+}
+
 
 .book-div span{
     width: 80%;
