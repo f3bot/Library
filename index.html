@@ -19,12 +19,12 @@
     </nav>
     <main>
         <div class="button-div"> <!-- We to jakoś elegancko w prawy dolny róg wypierdol i tam daj pop-up forma zeby bylo elegnacko i troche we uprzatnij ten pierdolnik w jsie-->
-            <button class="popup">Add Book</button>
-            <form action="#">
+            <button class="popup" onclick="openForm()">Add Book</button>
+            <form action="#" class="form" id="form">
                 <input type="text" name="title" id="title" placeholder="Title">
                 <input type="text" name="author" id="author" placeholder="Author">
                 <input type="text" name="pages" id="pages" placeholder="Pages">
-                <input type="submit" value="Submit" id="submit">
+                <input type="submit" value="Submit" id="submit" onclick="closeForm()">
             </form>
         </div>
         <div class="book-container">

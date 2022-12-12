@@ -37,13 +37,36 @@ img{
     align-items: center;
 }
 
+form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+}
+
+.form-opened{
+    visibility: visible !important;
+    transform: translate(-50%, 50%) scale(1) !important;
+}
+
+form:active{
+    display: block;
+}
+
 form input{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .book-container{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    padding: 0 10% 0 13%;
 }
 
 .book-div{
@@ -52,12 +75,11 @@ form input{
     align-items: center;
     flex-direction: column;
     height: 280px;
-    width: 200px;
-    margin: 1% 1% 1% 1%;
+    width: 250px;
     -webkit-box-shadow: -3px 17px 36px -7px rgba(66, 68, 90, 1);
     -moz-box-shadow: -3px 17px 36px -7px rgba(66, 68, 90, 1);
     box-shadow: -3px 17px 36px -7px rgba(66, 68, 90, 1);
-    padding: 1.5% 0% 1.5% 0;
+    margin: 2.5% 2.5% 2.5% 3.5%;
 }
 
 .book-div span{

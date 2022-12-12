@@ -5,25 +5,25 @@ const submit = document.getElementById('submit')
 const bookcontainer = document.querySelector('.book-container')
 const loginPopUp = document.querySelector('.popup')
 const checkbox = document.querySelector('.checkbox')
+const form = document.querySelector('#form')
 let myLibrary = []
 let counter = 0
 
 const openForm = () =>{
-    loginPopUp.style.display = 'block'
+    form.classList.add('.form-opened')
+    console.log('h')
 }
 
 const closeForm = () =>{
-    loginPopUp.style.display = 'none'
+    form.style.visibility = 'hidden'
+    form.style.transform = 'translate(-50%, -50%) scale(0.1)'
 }
 
-
-
-function Book(title,author,pages,status)
+function Book(title,author,pages)
 {
     this.title = title
     this.author = author
     this.pages = pages
-    this.status = status
 }
 
 const addBook = () =>{
