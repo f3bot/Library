@@ -6,6 +6,8 @@ const bookcontainer = document.querySelector('.book-container')
 const loginPopUp = document.querySelector('.popup')
 const checkbox = document.querySelector('.checkbox')
 const form = document.querySelector('#form')
+const form_container = document.querySelector('.form-container')
+const closebutton = document.querySelector('.closebtn')
 let myLibrary = []
 let counter = 0
 
@@ -74,7 +76,7 @@ const readEvent = (element) =>{
 
 const removeEvent = (e,target) =>{
     e.addEventListener('click', () =>{
-        target.style.scale = '0.1'
+        target.style.scale = '0.01'
         target.style.transition = '0.8s'
         setTimeout(() => {
             target.remove();
@@ -82,3 +84,12 @@ const removeEvent = (e,target) =>{
     })
 }
 
+const openModal = () =>{
+    form_container.style.display = 'block'
+    if(form_container.style.display = 'block'){
+        console.log('hi')
+    }
+}
+const closeModal = () =>{
+    form_container.style.display = 'none'
+}

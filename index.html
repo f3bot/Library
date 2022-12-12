@@ -18,15 +18,27 @@
         </div>
     </nav>
     <main>
-        <div class="button-div"> <!-- We to jakoś elegancko w prawy dolny róg wypierdol i tam daj pop-up forma zeby bylo elegnacko i troche we uprzatnij ten pierdolnik w jsie-->
-            <button class="popup" onclick="openForm()">Add Book</button>
-            <form action="#" class="form" id="form">
-                <input type="text" name="title" id="title" placeholder="Title">
-                <input type="text" name="author" id="author" placeholder="Author">
-                <input type="text" name="pages" id="pages" placeholder="Pages">
-                <input type="submit" value="Submit" id="submit" onclick="closeForm()">
+            <button class="popup" onclick="openModal()">Add Book</button>
+            <div class="form-container">
+                <div class="btn-container">
+                    <button class="closebtn" onclick="closeModal()">X</button>
+                </div>
+                <form action="#" class="form" id="form">
+                <div class="form-inside">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div class="form-inside">
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author"">
+                </div>
+                <div class="form-inside">
+                    <label for="pages">Pages</label>
+                    <input type="text" name="pages" id="pages">
+                </div>
+                <input type="submit" value="Submit" id="submit">
             </form>
-        </div>
+            </div>
         <div class="book-container">
 
         </div>

@@ -33,7 +33,46 @@ img{
 }
 
 main{
-    background-color:  rgba(235, 232, 232, 0.685)
+    background-color:  rgba(235, 232, 232, 0.685);
+}
+
+.form-container{
+    height: 450px;
+    width: 400px;
+    position: fixed;
+    top: 25%;
+    left: 40%;
+    border: 5px solid black;
+}
+
+form{
+    display: none;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closebtn{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    color: black;
+    border: 2px solid black;
+}
+
+.form-inside{
+    display: flex;
+    flex-direction: column;
+}
+
+form input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .button-div{
@@ -43,11 +82,6 @@ main{
     align-items: center;
 }
 
-form input{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
 
 .book-container{
     width: 100%;
