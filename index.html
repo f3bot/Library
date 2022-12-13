@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
 </head>
-<body>
+<body class="body">
     <nav class="navbar">
         <div class="left">
             <img src="script.png" alt="book">
@@ -18,7 +18,6 @@
         </div>
     </nav>
     <main>
-            <button class="popup" onclick="openModal()">Add Book</button>
             <div class="form-container">
                 <div class="btn-container">
                     <button class="closebtn" onclick="closeModal()">X</button>
@@ -30,19 +29,24 @@
                 </div>
                 <div class="form-inside">
                     <label for="author">Author</label>
-                    <input type="text" name="author" id="author"">
+                    <input type="text" name="author" id="author">
                 </div>
                 <div class="form-inside">
                     <label for="pages">Pages</label>
                     <input type="text" name="pages" id="pages">
                 </div>
-                <input type="submit" value="Submit" id="submit">
+                <div class="form-inside">
+                    <input type="submit" value="Submit" id="submit">
+                </div>
             </form>
             </div>
         <div class="book-container">
 
         </div>
     </main>
+    <div class="addbook-div">
+        <button class="popup" onclick="openModal()">+</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

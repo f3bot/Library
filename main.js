@@ -3,13 +3,8 @@ const authorint = document.getElementById('author')
 const pagesint = document.getElementById('pages')
 const submit = document.getElementById('submit')
 const bookcontainer = document.querySelector('.book-container')
-const loginPopUp = document.querySelector('.popup')
-const checkbox = document.querySelector('.checkbox')
-const form = document.querySelector('#form')
 const form_container = document.querySelector('.form-container')
 const closebutton = document.querySelector('.closebtn')
-let myLibrary = []
-let counter = 0
 
 function Book(title,author,pages)
 {
@@ -58,9 +53,7 @@ const resetInput = () =>{
 submit.addEventListener('click', (e) =>{
     e.preventDefault()
     addBook()
-    resetInput()
-    counter++
-})
+    resetInput()})
 
 const readEvent = (element) =>{
     element.addEventListener('click', () =>{
@@ -85,11 +78,9 @@ const removeEvent = (e,target) =>{
 }
 
 const openModal = () =>{
-    form_container.style.display = 'block'
-    if(form_container.style.display = 'block'){
-        console.log('hi')
-    }
+    form_container.classList.add('active')
 }
 const closeModal = () =>{
-    form_container.style.display = 'none'
+    form_container.classList.remove('active')
 }
+
