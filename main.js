@@ -6,6 +6,7 @@ const pagesform = document.querySelector('.pages')
 const statusform = document.querySelector('.statusbtn')
 const submitbtn = document.querySelector('.submit')
 const booksDiv = document.querySelector('.books')
+const addBookBtn = document.querySelector('.add-btn')
 
 let counter = 0
 let myLibrary = []
@@ -50,13 +51,38 @@ const displayBook = () =>{
     const authorspan = document.createElement('span')
     const pagesspan = document.createElement('span')
     const readBtn = document.createElement('button')
+    const deleteBtn = document.createElement('button')
     titlespan.innerHTML = myLibrary[counter].title
     authorspan.innerHTML = myLibrary[counter].author
     pagesspan.innerHTML = myLibrary[counter].pages
     readBtn.innerHTML = myLibrary[counter].status
-    parentDiv.appendChild(titlespan).appendChild(authorspan).appendChild(pagesspan).appendChild(readBtn)
+    deleteBtn.innerHTML = 'Delete Book'
+    listenerToRead(readBtn) 
+    listenerToDelete(deleteBtn, parentDiv)
+    parentDiv.appendChild(titlespan).appendChild(authorspan).appendChild(pagesspan).appendChild(readBtn).appendChild(deleteBtn)
     booksDiv.appendChild(parentDiv)
     counter++
+}
+
+const listenerToRead = (button) =>{
+    button.addEventListener('click', () =>{
+        if(button.innerHTML == 'Read')
+        {
+            button.innerHTML = 'Not Read'
+            button.style.background = 'red'
+        }
+        else
+        {
+            button.innerHTML = 'Read'
+            button.style.background = 'green'
+        }
+    })
+} 
+
+const listenerToDelete = (button, div) =>{
+    button.addEventListener('click', () =>{
+        div.remove()
+    })
 }
 
 submitbtn.addEventListener('click', (e) =>{
@@ -70,4 +96,8 @@ submitbtn.addEventListener('click', (e) =>{
         displayBook()
         clearFields()
     }
+})
+
+addBookBtn.addEventListener('click', () =>{
+    
 })
