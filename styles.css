@@ -5,6 +5,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+main{
+    min-height: 88vh;
+    min-width: 100vw;
+    background-color: rgb(230, 230, 230);
+}
+
 .body-active
 {
     opacity: 1;
@@ -16,8 +22,10 @@ nav
     justify-content: center;
     align-items: center;
     gap: 1%;
+    height: 128px;
     color: black;
     font-size: 60px;
+    background-color: white !important;
 }
 
 nav img{
@@ -25,8 +33,12 @@ nav img{
     min-width: auto;
     max-height: 125px;
     max-width: 75px;
+    background-color: white !important;
 }
 
+nav span{
+    background-color: white !important;
+}
 
 .form{
     display: none;
@@ -36,13 +48,13 @@ nav img{
 {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    gap: 25px;
+    position: fixed;
     height: 50%;
     width: 25%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 1 !important;
     border: 1px solid black;
     z-index: 10;
     background-color: white;
@@ -50,12 +62,26 @@ nav img{
 
 .form input{
     height: 8%;
-    font-size: 24px;
+    font-size: 24px;   
 }
 
+.button-div{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close{
+    border: none;
+    background-color: white;
+    font-size: 30px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 .add-btn{
-    position: absolute;
+    position: fixed;
     bottom: 0%;
     right: 0%;
     height: 100px;
@@ -66,6 +92,40 @@ nav img{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(215, 215, 215);
+}
+
+.books{
+    display: flex;
+}
+
+.book-container{
+    height: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(116, 115, 115);
+    border-radius: 15px;
+    font-size: 36px;
+}
+
+.titlespan{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    border-bottom: 1px solid rgb(146, 145, 145);
+}
+
+.book-container button{
+    font-size: 24px;
+    height: 15%;
+    width: 80%;
+    border-radius: 10px;
 }
 
 .overlay-active{

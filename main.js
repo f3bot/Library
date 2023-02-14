@@ -56,10 +56,11 @@ const displayBook = () =>{
     const pagesspan = document.createElement('span')
     const readBtn = document.createElement('button')
     const deleteBtn = document.createElement('button')
-    titlespan.innerHTML = myLibrary[counter].title
+    titlespan.innerHTML = "''" + myLibrary[counter].title + "''"
     authorspan.innerHTML = myLibrary[counter].author
     pagesspan.innerHTML = myLibrary[counter].pages
     readBtn.innerHTML = myLibrary[counter].status
+    deleteBtn.innerHTML = 'Delete Book'
     listenerToRead(readBtn) 
     listenerToDelete(deleteBtn, parentDiv)
     parentDiv.appendChild(titlespan)
@@ -68,6 +69,8 @@ const displayBook = () =>{
     parentDiv.appendChild(readBtn)
     parentDiv.appendChild(deleteBtn)
     booksDiv.appendChild(parentDiv)
+    parentDiv.classList.add('book-container')
+    titlespan.classList.add('titlespan')
     counter++
 }
 
@@ -117,5 +120,11 @@ addBookBtn.addEventListener('click', () =>{
         form.classList.remove('form-active')
         overlay.classList.remove('overlay-active')
     }
+    i++
+})
+
+closeBtn.addEventListener('click', () =>{
+    form.classList.remove('form-active')
+    overlay.classList.remove('overlay-active')
     i++
 })
