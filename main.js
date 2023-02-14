@@ -49,6 +49,7 @@ const clearFields = ( ) =>{
     authorform.value = ''
     pagesform.value = ''
     statusform.value = 'Not Read'
+    statusform.style.background = '#eb6157'
 }
 
 const displayBook = () =>{

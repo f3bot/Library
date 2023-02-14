@@ -47,28 +47,30 @@ nav span{
 
 .form-active
 {
-    border: 5px solid red;
     transform: scale(1.5);
     transition: 0.2s;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    align-items: center;
     position: fixed;
     height: 50%;
     width: 25%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid black;
     z-index: 10;
-    background-color: white;
     overflow: hidden;
+    background-color: white;
     border-radius: 40px;
+    gap: 7%;
 }
 
 .form input{
     height: 8%;
     font-size: 24px;   
+    border-radius: 5px;
+    overflow: hidden;
+    width: 80%;
 }
 
 .button-div{
@@ -76,7 +78,7 @@ nav span{
     justify-content: flex-end;
 }
 
-.close{
+.close{ 
     border: none;
     background-color: white;
     font-size: 30px;
@@ -84,6 +86,28 @@ nav span{
     width: 45px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.close:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+.close:not(:hover)
+{
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.submit:hover{
+    transform: scale(1.05);
+    transition: 0.8s;
+}
+
+.submit:not(:hover)
+{
+    transform: scale(1);
+    transition: 0.8s;
 }
 
 .add-btn{
