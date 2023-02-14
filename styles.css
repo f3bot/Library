@@ -8,3 +8,17 @@
     width: 100px;
     height: 100px;
 }
+
+.form{
+    display: none;
+}
+
+.form-active
+{
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    border: 1px solid black;
+
+}

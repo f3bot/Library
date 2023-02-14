@@ -9,6 +9,7 @@ const booksDiv = document.querySelector('.books')
 const addBookBtn = document.querySelector('.add-btn')
 
 let counter = 0
+let i = 0
 let myLibrary = []
 
 function Book(title, author, pages ,status)
@@ -99,5 +100,13 @@ submitbtn.addEventListener('click', (e) =>{
 })
 
 addBookBtn.addEventListener('click', () =>{
-    
+    if(i % 2 == 0)
+    {
+        form.classList.add('form-active')
+    }
+    else
+    {
+        form.classList.remove('form-active')
+    }
+    i++
 })
