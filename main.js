@@ -7,6 +7,8 @@ const statusform = document.querySelector('.statusbtn')
 const submitbtn = document.querySelector('.submit')
 const booksDiv = document.querySelector('.books')
 const addBookBtn = document.querySelector('.add-btn')
+const overlay = document.querySelector('#overlay')
+const closeBtn = document.querySelector('.close')
 
 let counter = 0
 let i = 0
@@ -47,6 +49,7 @@ const clearFields = ( ) =>{
 }
 
 const displayBook = () =>{
+    //Tak wiem, można wpierdolić to gówno w array i jebać forloopa, ale za chuja mi sie nie chce
     const parentDiv = document.createElement('div')
     const titlespan = document.createElement('span')
     const authorspan = document.createElement('span')
@@ -57,10 +60,13 @@ const displayBook = () =>{
     authorspan.innerHTML = myLibrary[counter].author
     pagesspan.innerHTML = myLibrary[counter].pages
     readBtn.innerHTML = myLibrary[counter].status
-    deleteBtn.innerHTML = 'Delete Book'
     listenerToRead(readBtn) 
     listenerToDelete(deleteBtn, parentDiv)
-    parentDiv.appendChild(titlespan).appendChild(authorspan).appendChild(pagesspan).appendChild(readBtn).appendChild(deleteBtn)
+    parentDiv.appendChild(titlespan)
+    parentDiv.appendChild(authorspan)
+    parentDiv.appendChild(pagesspan)
+    parentDiv.appendChild(readBtn)
+    parentDiv.appendChild(deleteBtn)
     booksDiv.appendChild(parentDiv)
     counter++
 }
@@ -87,6 +93,7 @@ const listenerToDelete = (button, div) =>{
 }
 
 submitbtn.addEventListener('click', (e) =>{
+    e.preventDefault()
     if(titleform.value == '' || authorform.value == '' || pagesform.value == '')
     {
         console.log("throw")
@@ -103,10 +110,12 @@ addBookBtn.addEventListener('click', () =>{
     if(i % 2 == 0)
     {
         form.classList.add('form-active')
+        overlay.classList.add('overlay-active')
     }
     else
     {
         form.classList.remove('form-active')
+        overlay.classList.remove('overlay-active')
     }
     i++
 })

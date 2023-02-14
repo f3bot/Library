@@ -2,12 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-.statusbtn{
-    width: 100px;
-    height: 100px;
+.body-active
+{
+    opacity: 1;
 }
+
+nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    color: black;
+    font-size: 60px;
+}
+
+nav img{
+    min-height: 25px;
+    min-width: auto;
+    max-height: 125px;
+    max-width: 75px;
+}
+
 
 .form{
     display: none;
@@ -15,10 +34,46 @@
 
 .form-active
 {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 40%;
-    left: 40%;
+    height: 50%;
+    width: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1 !important;
     border: 1px solid black;
+    z-index: 10;
+    background-color: white;
+}
 
+.form input{
+    height: 8%;
+    font-size: 24px;
+}
+
+
+.add-btn{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    font-size: 90px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-active{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
 }
