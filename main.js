@@ -10,8 +10,11 @@ const addBookBtn = document.querySelector('.add-btn')
 const overlay = document.querySelector('#overlay')
 const closeBtn = document.querySelector('.close')
 
+
+
 let counter = 0
 let i = 0
+let j = 0
 let myLibrary = []
 
 function Book(title, author, pages ,status)
@@ -60,6 +63,14 @@ const displayBook = () =>{
     authorspan.innerHTML = myLibrary[counter].author
     pagesspan.innerHTML = myLibrary[counter].pages
     readBtn.innerHTML = myLibrary[counter].status
+    if(myLibrary[counter].status == 'Read')
+    {
+        readBtn.style.background = '#4ddb5d'
+    }
+    else
+    {
+        readBtn.style.background = '#eb6157'
+    }
     deleteBtn.innerHTML = 'Delete Book'
     listenerToRead(readBtn) 
     listenerToDelete(deleteBtn, parentDiv)
@@ -79,12 +90,12 @@ const listenerToRead = (button) =>{
         if(button.innerHTML == 'Read')
         {
             button.innerHTML = 'Not Read'
-            button.style.background = 'red'
+            button.style.background = '#eb6157'
         }
         else
         {
             button.innerHTML = 'Read'
-            button.style.background = 'green'
+            button.style.background = '#4ddb5d'
         }
     })
 } 
@@ -127,4 +138,15 @@ closeBtn.addEventListener('click', () =>{
     form.classList.remove('form-active')
     overlay.classList.remove('overlay-active')
     i++
+})
+
+statusform.addEventListener('click', () =>{
+    if(j % 2 == 0)
+    {
+        statusform.style.background = '#eb6157'
+    }  
+    else{
+        statusform.style.background = '#4ddb5d'
+    }
+    j++
 })

@@ -47,6 +47,9 @@ nav span{
 
 .form-active
 {
+    border: 5px solid red;
+    transform: scale(1.5);
+    transition: 0.2s;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -59,6 +62,8 @@ nav span{
     border: 1px solid black;
     z-index: 10;
     background-color: white;
+    overflow: hidden;
+    border-radius: 40px;
 }
 
 .form input{
@@ -96,6 +101,11 @@ nav span{
     border: none;
     cursor: pointer;
     background-color: rgb(215, 215, 215);
+}
+
+.add-btn:hover{
+    transform: rotate(2turn);
+    transition: ease 1.5s;
 }
 
 .books{
@@ -142,4 +152,8 @@ nav span{
     left: 0;
     background-color: rgba(0, 0, 0, .5);
     pointer-events: none;
+}
+
+.statusbtn{
+    background-color: #4ddb5d;
 }
