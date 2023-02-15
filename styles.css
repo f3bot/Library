@@ -47,8 +47,6 @@ nav span{
 
 .form-active
 {
-    transform: scale(1.5);
-    transition: 0.2s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +60,7 @@ nav span{
     overflow: hidden;
     background-color: white;
     border-radius: 40px;
-    gap: 7%;
+    gap: 5%;
 }
 
 .form input{
@@ -73,9 +71,17 @@ nav span{
     width: 80%;
 }
 
+.form span{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+
 .button-div{
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+
 }
 
 .close{ 
@@ -180,4 +186,17 @@ nav span{
 
 .statusbtn{
     background-color: #4ddb5d;
+}
+
+@media only screen and (max-width:1200px){
+    .form{
+        width: 50%;
+        height: 60%;
+    }
+
+    .add-btn{
+        height: 60px;
+        width: 60px;
+        font-size: 48px;
+    }   
 }
